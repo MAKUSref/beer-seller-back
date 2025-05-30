@@ -9,7 +9,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  methods: ['GET', 'POST', 'DELETE', 'PATCH', 'PUT']
+  origin: false,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  credentials: true
 }));
 
 app.use("/api/product", productRoute);
