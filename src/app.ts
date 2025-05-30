@@ -3,7 +3,7 @@ import productRoute from "./routes/product.route";
 import walletRouter from "./routes/wallet.route";
 import cors from "cors";
 
-const PORT = 3001;
+const PORT = 3000;
 
 const app = express();
 
