@@ -14,7 +14,7 @@ class ProductRepository {
 
   addProduct(product: Product, quantity: number) {
     this.products = this.products.map((p) => ({
-      ...product,
+      ...p,
       quantity:
         p.id === product.id
           ? p.quantity + quantity
@@ -33,7 +33,7 @@ class ProductRepository {
 
   sellProduct(product: Product, quantity: number) {
     this.products = this.products.map((p) => ({
-      ...product,
+      ...p,
       quantity:
         p.id === product.id
           ? p.quantity - quantity
