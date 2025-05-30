@@ -7,7 +7,9 @@ export class ProductController {
     _req: Request,
     res: Response
   ) => {
+    
     const products = ProductService.findAll();
+    console.log('get', products);
     res.json(products);
   };
 
@@ -41,6 +43,9 @@ export class ProductController {
     res: Response
   ) => {
     const data = req.body;
+
+    console.log(data);
+    
     try {
       ProductService.createProduct(data);
       res.status(201).json();
